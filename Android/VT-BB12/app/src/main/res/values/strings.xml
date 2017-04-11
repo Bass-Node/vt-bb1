@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VT-BB1</string>
+    <string name="action_settings">Settings</string>
 </resources>
