@@ -5,6 +5,10 @@ Code for the vt-bb1 project at VTC.  This will eventually have both the code use
 Raspberry Pi, as well as the the code used in the Arduino Mega
 
 Folders:
+* vt-bb1/Android
+
+	- contains code for android app
+
 * vt-bb1/Arduino/Drive
 
 	- contains code for the drive function of the vt-bb1
