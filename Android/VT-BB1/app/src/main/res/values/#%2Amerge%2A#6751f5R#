@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <resources>
     <string name="app_name">VT-BB1</string>
     <string name="action_settings">Settings</string>
@@ -6,9 +5,3 @@
     <string name="drive_mode">Drive Mode</string>
     <string name="roam_mode">Roam Mode</string>
 </resources>
-=======
-<resources>
-    <string name="app_name">VT-BB1</string>
-    <string name="action_settings">Settings</string>
-</resources>
->>>>>>> 7c438c94f3d8ce07f708dd13c832e4dbc26cbcc3
