@@ -4,4 +4,6 @@
     <string name="connection_status">Connection Status</string>
     <string name="drive_mode">Drive Mode</string>
     <string name="roam_mode">Roam Mode</string>
+    <string name="speed_control">Speed Control</string>
+    <string name="video_feed">Video Feed</string>
 </resources>

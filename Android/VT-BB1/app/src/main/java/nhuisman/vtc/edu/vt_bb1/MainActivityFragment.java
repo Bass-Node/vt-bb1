@@ -19,4 +19,28 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_main, container, false);
     }
+
+    private void ConnectionStatusClicked() {
+        int x = 1;
+    }
+
+    private void ModeClicked() {
+        int x = 1;
+    }
+
+    private void ForwardClicked() {
+        int x = 1;
+    }
+
+    private void ReverseClicked() {
+        int x = 1;
+    }
+
+    private void RightClicked() {
+        int x = 1;
+    }
+
+    private void LeftClicked() {
+        int x = 1;
+    }
 }
