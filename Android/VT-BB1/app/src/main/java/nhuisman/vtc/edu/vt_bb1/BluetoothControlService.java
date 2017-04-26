@@ -46,7 +46,7 @@ public class BluetoothControlService {
     private AcceptThread mSecureAcceptThread;
     private AcceptThread mInsecureAcceptThread;
     private ConnectThread mConnectThread;
-    private ConnectedThread mConnectedThread;
+    private ConnectedThreadcd  mConnectedThread;
     private int mState;
     private int mNewState;
 
