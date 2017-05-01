@@ -7,6 +7,7 @@ demo_curvelinear_grid.py.
 """
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 import mpl_toolkits.axisartist.angle_helper as angle_helper
 from matplotlib.projections import PolarAxes
 from matplotlib.transforms import Affine2D
@@ -58,22 +59,31 @@ def curvelinear_test2(fig):
 
     # floating axis whose second coordinate (r) is fixed at 6
     ax1.axis["top"].major_ticklabels.set_visible(True)
-    # axis.label.set_text(r"$r = 6$")
-    # axis.label.set_visible(True)
-
 
     ax1.set_aspect(1.)
     ax1.set_xlim(-15, 15)
     ax1.set_ylim(0, 20)
-
     ax1.grid(True)
+    
+    xs = [1,1,3,1,1,1,2]
+    ys = [1,4,5,3,7,7,5]
+    
+    ax1.plot(xs, ys)
 
-    x = [1,2,3,4,5,6,7,8]
-    y = [5,2,4,2,1,4,5,2]
-
-    ax1.plot(x, y)
+def animate(i):
+	global xs
+	global ys
+	graph_data = open('example.txt', 'r').read()
+	lines = graph_data.split('\n')
+	for line in lines:
+		if len(line) > 1:
+			x,y = line.split(',')
+			xs.append(x)
+			ys.append(y)
+	return xs, ys
 
 fig = plt.figure(1, figsize=(5, 5))
+# ani = animation.FuncAnimation(fig, animate, interval=1000)
 fig.clf()
 curvelinear_test2(fig)
 
