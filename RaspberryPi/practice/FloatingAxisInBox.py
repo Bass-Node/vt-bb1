@@ -32,7 +32,7 @@ def curvelinear_test2(fig):
                                                      lon_cycle=360,
                                                      lat_cycle=None,
                                                      lon_minmax=None,
-                                                     lat_minmax=(0,np.inf),
+                                                     lat_minmax=(0, np.inf)
                                                      )
 
     grid_locator1 = angle_helper.LocatorDMS(12)
@@ -64,26 +64,30 @@ def curvelinear_test2(fig):
     ax1.set_xlim(-15, 15)
     ax1.set_ylim(0, 20)
     ax1.grid(True)
-    
-    xs = [1,1,3,1,1,1,2]
-    ys = [1,4,5,3,7,7,5]
-    
+
+    # xs = [1, 2, 3, 2, 3, 4, 5]
+    # ys = [1, 4, 5, 4, 2, 2, 3]
+
     ax1.plot(xs, ys)
 
+
 def animate(i):
-	global xs
-	global ys
-	graph_data = open('example.txt', 'r').read()
-	lines = graph_data.split('\n')
-	for line in lines:
-		if len(line) > 1:
-			x,y = line.split(',')
-			xs.append(x)
-			ys.append(y)
-	return xs, ys
+    xs = []
+    ys = []
+    graph_data = open('example.txt', 'r').read()
+    lines = graph_data.split('\n')
+    for line in lines:
+        if len(line) > 1:
+            x, y = line.split(',')
+            xs.append(x)
+            ys.append(y)
+    return xs, ys
+
+global xs
+global ys
 
 fig = plt.figure(1, figsize=(5, 5))
-# ani = animation.FuncAnimation(fig, animate, interval=1000)
+ani = animation.FuncAnimation(fig, animate, interval=1000)
 fig.clf()
 curvelinear_test2(fig)
 
