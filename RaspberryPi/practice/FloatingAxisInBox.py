@@ -14,6 +14,9 @@ from matplotlib.transforms import Affine2D
 from mpl_toolkits.axisartist import SubplotHost
 from mpl_toolkits.axisartist import GridHelperCurveLinear
 
+global xs
+global ys
+
 
 def curvelinear_test2(fig):
     """
@@ -83,8 +86,6 @@ def animate(i):
             ys.append(y)
     return xs, ys
 
-global xs
-global ys
 
 fig = plt.figure(1, figsize=(5, 5))
 ani = animation.FuncAnimation(fig, animate, interval=1000)
