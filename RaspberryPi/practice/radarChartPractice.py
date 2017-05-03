@@ -27,5 +27,5 @@ def radar_factory(num_vars, frame='circle'):
     """
     # calculates evenly spaced axis angles
     theta = np.linspace(0, 2*np.pi, num_vars, endpoint=False)
-    # rotate theta such that the first acis is at the top
+    # rotate theta such that the first axis is at the top
     theta += np.pi/2
