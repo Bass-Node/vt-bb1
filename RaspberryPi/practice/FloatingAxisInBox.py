@@ -14,6 +14,9 @@ from matplotlib.transforms import Affine2D
 from mpl_toolkits.axisartist import SubplotHost
 from mpl_toolkits.axisartist import GridHelperCurveLinear
 
+global xs
+global ys
+
 
 def curvelinear_test2(fig):
     """
@@ -32,8 +35,7 @@ def curvelinear_test2(fig):
                                                      lon_cycle=360,
                                                      lat_cycle=None,
                                                      lon_minmax=None,
-                                                     lat_minmax=(0, np.inf),
-                                                     )
+                                                     lat_minmax=(0, np.inf)                                                     )
 
 
     grid_locator1 = angle_helper.LocatorDMS(12)
@@ -75,8 +77,6 @@ def curvelinear_test2(fig):
 
 
 def animate(i):
-    global xs
-    global ys
     xs = []
     ys = []
     graph_data = open('example.txt', 'r').read()
